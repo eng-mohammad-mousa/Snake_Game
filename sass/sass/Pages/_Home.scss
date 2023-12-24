@@ -25,6 +25,10 @@ h3 {
     font-weight: bold !important;
     color: black !important
   }
+
+  @media screen and (min-width:1600px) {
+    font-size: 2rem;
+  }
 }
 
 .continue {
@@ -48,11 +52,16 @@ h3 {
 .game-details {
   color: #fff;
   font-weight: 500;
-  font-size: 1.2rem;
+
   padding: 20px 8px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.2rem;
+
+  @media screen and (min-width:1600px) {
+    font-size: 2.5rem;
+  }
 }
 
 .game-details img {
@@ -157,6 +166,7 @@ h3 {
     left: 50% !important;
     bottom: 30px !important;
     font-size: 14px;
+
   }
 
   .wrapper {
