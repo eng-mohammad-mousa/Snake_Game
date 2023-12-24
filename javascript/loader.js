@@ -1,16 +1,14 @@
 "use strict";
-let loadingDiv = document.getElementById("loadingDiv"), divOpacityString = loadingDiv.style.opacity, divOpacityFloat = parseFloat(divOpacityString);
+let x, loadingDiv = document.getElementById("loadingDiv");
 window.onload = function () {
-    setTimeout(removeOpacity, 300);
+    setTimeout(removeLoadingDiv, 300);
 };
-function removeOpacity() {
-    divOpacityFloat = 1;
-    var fadeEffect = setInterval(function () {
-        if (!divOpacityFloat) {
-            divOpacityFloat = 1;
-        }
-        if (divOpacityFloat > 0) {
-            divOpacityFloat -= 0.1;
+function removeLoadingDiv() {
+    loadingDiv.style.opacity = '1';
+    const fadeEffect = setInterval(function () {
+        x = +loadingDiv.style.opacity;
+        if (x > 0) {
+            loadingDiv.style.opacity = `${x - 0.1}`;
         }
         else {
             clearInterval(fadeEffect);
