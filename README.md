@@ -8,7 +8,7 @@ The Snake Game is a classic arcade game where the player controls a snake that m
 ## Features
 
 - **Simple and intuitive controls:** The snake is controlled using arrow keys.
-- **Accelerating velocity**: The snake's speed increases as it devours multiple meals, enhancing the exhilaration of the game.
+- **Accelerating velocity:** The snake's speed increases as it devours multiple meals, enhancing the exhilaration of the game.
 - **Random food generation:** Food is randomly placed on the game screen for the snake to eat.
 - **Scoring:** The player's score increases with each food item eaten by the snake.
 - **Game Over condition:** The game ends if the snake collides with its own body.
