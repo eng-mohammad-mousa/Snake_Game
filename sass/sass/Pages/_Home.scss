@@ -1,0 +1,166 @@
+#body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: $white;
+
+  flex-direction: column;
+
+  position: relative;
+}
+
+h3 {
+  margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  bottom: 65px;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  padding: 0px 10px;
+  font-weight: lighter;
+
+  u {
+    font-weight: bold !important;
+    color: black !important
+  }
+}
+
+.continue {
+  display: none;
+}
+
+
+.wrapper {
+  transform: translateY(-15px);
+  width: 65vmin;
+  height: 70vmin;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+  background: $header_bk;
+  box-shadow: 0 20px 40px rgba(25, 28, 39, 0.2);
+}
+
+.game-details {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 20px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-details img {
+  margin-right: 5px;
+}
+
+.game-details img:last-of-type {
+  margin-right: 8px;
+  margin-left: auto;
+}
+
+.play-board {
+
+  height: 100%;
+  width: 100%;
+  display: grid;
+  background: $board_bk;
+  grid-gap: 1px;
+  grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+  background: $food_color;
+  border-radius: 50%;
+  transform: scale(.9);
+}
+
+.play-board .head {
+  background: $snake_color;
+}
+
+@for $i from 1 through 100 {
+  .play-board .body:nth-of-type(#{$i}) {
+
+    $val: 4px - calc($i / 10);
+    background: $snake_body_color;
+    background-image: radial-gradient(circle, $food_color $val, transparent $val);
+  }
+}
+
+.play-board .body:nth-of-type(n + 101) {
+  background: $snake_body_color;
+  background-image: initial !important;
+}
+
+.controls {
+  display: none;
+  justify-content: space-between;
+}
+
+@media (hover:none) {
+  .controls {
+    display: flex !important;
+  }
+}
+
+.controls i {
+  padding: 25px 0;
+  text-align: center;
+  font-size: 1.3rem;
+  color: #fff;
+  width: calc(100% / 5);
+  cursor: pointer;
+  border-right: 1px solid #171b26;
+
+}
+
+.controls i:last-child {
+  border-right: 0px !important;
+}
+
+@media (max-width:768px) {
+  .wrapper {
+    width: 90vmin;
+    height: 115vmin;
+  }
+
+  .game-details {
+    padding: 15px 8px;
+  }
+
+  .game-details span {
+    font-size: 16px !important;
+  }
+
+  .controls i {
+    padding: 15px 0;
+    font-size: 1rem;
+  }
+
+  .continue {
+    display: none !important;
+  }
+}
+
+
+
+@media screen and (max-height:570px) {
+
+  h3 {
+    position: absolute !important;
+    left: 50% !important;
+    bottom: 30px !important;
+    font-size: 14px;
+  }
+
+  .wrapper {
+    transform: translateY(-30px) !important;
+
+  }
+}

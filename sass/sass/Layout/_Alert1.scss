@@ -1,0 +1,10 @@
+div:where(.swal2-container) div:where(.swal2-popup){
+    background-color:$white !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
+    background-color: $snake_color !important;
+    padding-left: 30px;
+    padding-right : 30px;
+    font-weight: bold;
+}
