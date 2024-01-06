@@ -5,6 +5,11 @@ The Snake Game is a classic arcade game where the player controls a snake that m
 
 <br>
 
+## Live Demo
+You can play the game live by visiting the following link: [Live Demo](https://eng-mohammad-mousa.github.io/Snake_Game/)
+
+<br>
+
 ## Features
 
 - **Simple and intuitive controls:** The snake is controlled using arrow keys.
